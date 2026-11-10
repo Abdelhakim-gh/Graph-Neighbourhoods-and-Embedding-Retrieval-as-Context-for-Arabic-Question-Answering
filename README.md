@@ -10,7 +10,6 @@ On the 4,000 Arabic questions in the Mintaka test split, the study compares four
 configs/            model, graph and generation settings
 src/                graph, retrieval, scoring and model-calling code
 scripts/            pipeline and analysis scripts
-run_*.sh            commands used for grouped runs
 tests/              unit tests
 prompts/            Arabic answer and entity-mention prompts
 datasets/mintaka/   full Mintaka test split
@@ -78,33 +77,64 @@ in `results/tables/1000/entity_linking_1000.json`.
 
 ### Full rerun
 
-The shell scripts use `py -3.14` and Bash. They require network access for Wikidata and model downloads, and Ollama for answer generation. The included outputs and caches cause existing work to be reused; use a separate clean working copy when a fresh run is needed.
+A full rerun needs network access for Wikidata and the models, and Ollama for answer generation. The included outputs and caches make the scripts reuse existing work, so use a separate clean copy for a fresh run. Set `PYTHONHASHSEED=0` before running. Run one model job at a time.
+
+1. Fact store, graph walk and pooled retrieval:
 
 ```
-python unpack_data.py
 python scripts/01_collect_qids_and_pull_graph.py --scale 4000 --split test --max-hops 2
+python scripts/03_run_graph_walk.py --scale 4000 --split test
 python scripts/02_run_retrieval.py --scale 4000 --split test --embedding-models intfloat/multilingual-e5-large
 python scripts/02b_retrieval_hit_rate.py --scale 4000 --split test
-python scripts/03_run_graph_walk.py --scale 4000 --split test
-bash run_stage4_4000.sh
-bash run_stage4_1000.sh
-bash run_seeds23_1000.sh
-bash run_stage5_aicset.sh answered
+```
+
+2. Answers on all 4,000 questions (no context, graph walk, pooled retrieval):
+
+```
+python scripts/04_run_answer_generation.py --scale 4000 --split test --arm no_retrieval --models aya-expanse:8b,qwen3.5:9b
+python scripts/04_run_answer_generation.py --scale 4000 --split test --arm graph_walk --models aya-expanse:8b,qwen3.5:9b
+python scripts/04_run_answer_generation.py --scale 4000 --split test --arm retrieval --embedding-model intfloat/multilingual-e5-large --models aya-expanse:8b,qwen3.5:9b
+```
+
+3. Six models on the 1,000-question sample (Sect. 4.5); each arm with
+`--models aya-expanse:8b,command-r7b-arabic:latest,gemma4:12b,mistral-nemo:12b,qwen3.5:4b,qwen3.5:9b`:
+
+```
+python scripts/04_run_answer_generation.py --scale 1000 --split test --arm no_retrieval --models ...
+python scripts/04_run_answer_generation.py --scale 1000 --split test --arm graph_walk --models ...
+python scripts/04_run_answer_generation.py --scale 1000 --split test --arm retrieval --embedding-model intfloat/multilingual-e5-large --models ...
+```
+
+4. Scoped retrieval on all 4,000 questions:
+
+```
+python scripts/11_build_contexts.py --mode scoped --store answered
+python scripts/04_run_answer_generation.py --scale 4000 --split test --arm contexts --context-name scoped_answered --models aya-expanse:8b,qwen3.5:9b
+```
+
+5. Camera-ready checks on the 1,000-question sample (Sect. 4.6):
+
+```
 python scripts/15_revision_contexts.py budget --k 50
 python scripts/11_build_contexts.py --mode walk --store question
 python scripts/11_build_contexts.py --mode pooled --store question
 python scripts/11_build_contexts.py --mode scoped --store question
 python scripts/11_build_contexts.py --mode walk --store answered --walk-hops 1 --tag _h1
-bash run_revision_aicset.sh
+python scripts/15_revision_contexts.py subset --names walk_question pooled_question scoped_question walk_answered_h1
 python scripts/16_predicted_entities.py mentions
 python scripts/16_predicted_entities.py link
 python scripts/16_predicted_entities.py evaluate
 python scripts/16_predicted_entities.py pull
 python scripts/16_predicted_entities.py contexts
-python scripts/04_run_answer_generation.py --scale 1000 --split test --arm contexts --context-name walk_predicted --models aya-expanse:8b,qwen3.5:9b
 ```
 
-`run_prep_4000.sh` groups the graph pull, walk and E5 retrieval steps. `run_stage6_aicset.sh` runs the six-model question-only comparison. Script 04 and the mention generation step resume by `item_id`; existing contexts are reused by the shell scripts. Do not use `--overwrite` when resuming. The September 2026 graph runs used walk tie-breaking that depended on Python's hash seed, so rerunning the walk need not reproduce every context line, as stated in the paper.
+then, for each context name in `walk_answered_k50 pooled_answered_k50 walk_question pooled_question scoped_question walk_answered_h1 walk_predicted`:
+
+```
+python scripts/04_run_answer_generation.py --scale 1000 --split test --arm contexts --context-name NAME --models aya-expanse:8b,qwen3.5:9b
+```
+
+Script 04 and the mention step resume by `item_id`, and existing context files are reused. Do not use `--overwrite` when resuming. The September 2026 graph runs used walk tie-breaking that depended on Python's hash seed, so rerunning the walk need not reproduce every context line, as stated in the paper.
 
 ## Where each result comes from
 
