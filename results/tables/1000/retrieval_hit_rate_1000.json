@@ -1,0 +1,156 @@
+{
+ "scale": "1000",
+ "split": "test",
+ "models": {
+  "intfloat_multilingual-e5-large": {
+   "hit_rate": 0.693127962085308,
+   "hits": 585,
+   "n_scored": 844,
+   "n_errors": 0,
+   "n_skipped": 156,
+   "by_complexity_type": {
+    "comparative": {
+     "hit_rate": 0.9836065573770492,
+     "n": 61
+    },
+    "count": {
+     "hit_rate": 0.7788461538461539,
+     "n": 104
+    },
+    "difference": {
+     "hit_rate": 0.7211538461538461,
+     "n": 104
+    },
+    "generic": {
+     "hit_rate": 0.5842105263157895,
+     "n": 190
+    },
+    "intersection": {
+     "hit_rate": 0.7980769230769231,
+     "n": 104
+    },
+    "multihop": {
+     "hit_rate": 0.532608695652174,
+     "n": 92
+    },
+    "ordinal": {
+     "hit_rate": 0.7052631578947368,
+     "n": 95
+    },
+    "superlative": {
+     "hit_rate": 0.6276595744680851,
+     "n": 94
+    }
+   },
+   "by_category": {
+    "books": {
+     "hit_rate": 0.6923076923076923,
+     "n": 104
+    },
+    "geography": {
+     "hit_rate": 0.5648148148148148,
+     "n": 108
+    },
+    "history": {
+     "hit_rate": 0.7678571428571429,
+     "n": 112
+    },
+    "movies": {
+     "hit_rate": 0.7570093457943925,
+     "n": 107
+    },
+    "music": {
+     "hit_rate": 0.5321100917431193,
+     "n": 109
+    },
+    "politics": {
+     "hit_rate": 0.7523809523809524,
+     "n": 105
+    },
+    "sports": {
+     "hit_rate": 0.6699029126213593,
+     "n": 103
+    },
+    "videogames": {
+     "hit_rate": 0.8229166666666666,
+     "n": 96
+    }
+   }
+  },
+  "Omartificial-Intelligence-Space_Arabic-Triplet-Matryoshka-V2": {
+   "hit_rate": 0.5888625592417062,
+   "hits": 497,
+   "n_scored": 844,
+   "n_errors": 0,
+   "n_skipped": 156,
+   "by_complexity_type": {
+    "comparative": {
+     "hit_rate": 0.9016393442622951,
+     "n": 61
+    },
+    "count": {
+     "hit_rate": 0.6153846153846154,
+     "n": 104
+    },
+    "difference": {
+     "hit_rate": 0.5673076923076923,
+     "n": 104
+    },
+    "generic": {
+     "hit_rate": 0.5157894736842106,
+     "n": 190
+    },
+    "intersection": {
+     "hit_rate": 0.6826923076923077,
+     "n": 104
+    },
+    "multihop": {
+     "hit_rate": 0.42391304347826086,
+     "n": 92
+    },
+    "ordinal": {
+     "hit_rate": 0.6210526315789474,
+     "n": 95
+    },
+    "superlative": {
+     "hit_rate": 0.5531914893617021,
+     "n": 94
+    }
+   },
+   "by_category": {
+    "books": {
+     "hit_rate": 0.6153846153846154,
+     "n": 104
+    },
+    "geography": {
+     "hit_rate": 0.5092592592592593,
+     "n": 108
+    },
+    "history": {
+     "hit_rate": 0.7589285714285714,
+     "n": 112
+    },
+    "movies": {
+     "hit_rate": 0.616822429906542,
+     "n": 107
+    },
+    "music": {
+     "hit_rate": 0.3944954128440367,
+     "n": 109
+    },
+    "politics": {
+     "hit_rate": 0.6476190476190476,
+     "n": 105
+    },
+    "sports": {
+     "hit_rate": 0.47572815533980584,
+     "n": 103
+    },
+    "videogames": {
+     "hit_rate": 0.6979166666666666,
+     "n": 96
+    }
+   }
+  }
+ }
+}

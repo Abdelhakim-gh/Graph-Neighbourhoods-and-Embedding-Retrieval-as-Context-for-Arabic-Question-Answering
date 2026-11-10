@@ -1,0 +1,84 @@
+==============================================================================
+SCALE 4000, answer-seeded store
+
+--- aya: arms ['none', 'graph', 'pooled', 'scoped'], paired questions 4000
+   accuracy none     30.52%
+   accuracy graph    36.38%
+   accuracy pooled   31.73%
+   accuracy scoped   34.15%
+    graph - pooled  +4.65 pts  (only graph 507, only pooled 321)  McNemar p = 1.1e-10
+    graph - scoped  +2.23 pts  (only graph 376, only scoped 287)  McNemar p = 0.00062
+   scoped - pooled  +2.42 pts  (only scoped 415, only pooled 318)  McNemar p = 0.00038
+    graph - none    +5.85 pts  (only graph 566, only none 332)  McNemar p = 5.3e-15
+   pooled - none    +1.20 pts  (only pooled 486, only none 438)  McNemar p = 0.12
+   scoped - none    +3.62 pts  (only scoped 533, only none 388)  McNemar p = 2e-06
+   entity questions with an Arabic gold label: 2145
+   graph   coverage  66.7%  | answer present:  43.5% correct  | miss set n=715:  20.4% with context vs  21.5% no context
+   pooled  coverage  76.5%  | answer present:  40.0% correct  | miss set n=504:   2.8% with context vs   9.5% no context
+   scoped  coverage  74.9%  | answer present:  39.9% correct  | miss set n=539:  13.0% with context vs  16.0% no context
+   split graph-pooled: answer in context  -1.59, answer absent  +6.15, total  +4.57
+   split graph-scoped: answer in context  -0.84, answer absent  +3.54, total  +2.70
+   split scoped-pooled: answer in context  -0.75, answer absent  +2.61, total  +1.86
+   entity-answer questions n=2499: graph - pooled +4.12 p = 4.4e-06
+   by answer type graph-pooled: entity n=2499  +4.1 (p=4.4e-06); boolean n=573  -0.5 (p=0.85); numerical n=655  +9.3 (p=2.9e-07); date n=265  +9.4 (p=0.0046)
+   by answer type graph-scoped: entity n=2499  +2.2 (p=0.0087); boolean n=573  +0.2 (p=1); numerical n=655  +3.7 (p=0.024); date n=265  +3.4 (p=0.24)
+   by answer type scoped-pooled: entity n=2499  +1.9 (p=0.027); boolean n=573  -0.7 (p=0.75); numerical n=655  +5.6 (p=0.0017); date n=265  +6.0 (p=0.06)
+   per type graph-pooled: multihop +8.8, count +8.0, ordinal +7.2, generic +5.6, difference +4.0, superlative +3.5, intersection +2.5, comparative +0.8, yesno +0.5
+   per type graph-scoped: multihop +4.8, ordinal +3.8, difference +3.8, intersection +3.2, comparative +2.5, generic +2.4, count +2.2, yesno -0.8, superlative -2.0
+   cost none       56.5 Wh  0.88 s/q  token cap 0.0%  median prompt 192  max prompt 247
+   cost graph     236.5 Wh  3.11 s/q  token cap 0.0%  median prompt 2613  max prompt 6059
+   cost pooled    292.1 Wh  3.81 s/q  token cap 0.0%  median prompt 2967  max prompt 5368
+   cost scoped    263.9 Wh  3.47 s/q  token cap 0.1%  median prompt 2648  max prompt 5532
+   example b2ee87db none    correct=True  gold at line none  lines with 'second' 0/0  answer: 'جون آدمز'
+   example b2ee87db graph   correct=True  gold at line [122]  lines with 'second' 0/150  answer: 'جون آدامز'
+   example b2ee87db pooled  correct=False  gold at line none  lines with 'second' 137/150  answer: 'ألبير الثاني من موناكو'
+   example b2ee87db scoped  correct=False  gold at line [59, 128]  lines with 'second' 23/150  answer: 'أندرو جاكسون'
+
+--- qwen: arms ['none', 'graph', 'pooled', 'scoped'], paired questions 4000
+   accuracy none     18.85%
+   accuracy graph    30.38%
+   accuracy pooled   31.95%
+   accuracy scoped   30.50%
+    graph - pooled  -1.57 pts  (only graph 390, only pooled 453)  McNemar p = 0.033
+    graph - scoped  -0.12 pts  (only graph 328, only scoped 333)  McNemar p = 0.88
+   scoped - pooled  -1.45 pts  (only scoped 353, only pooled 411)  McNemar p = 0.039
+    graph - none   +11.53 pts  (only graph 674, only none 213)  McNemar p = 2e-56
+   pooled - none   +13.10 pts  (only pooled 746, only none 222)  McNemar p = 8.2e-67
+   scoped - none   +11.65 pts  (only scoped 680, only none 214)  McNemar p = 3.3e-57
+   entity questions with an Arabic gold label: 2145
+   graph   coverage  66.7%  | answer present:  39.0% correct  | miss set n=715:   9.9% with context vs   9.2% no context
+   pooled  coverage  76.5%  | answer present:  40.8% correct  | miss set n=504:   1.6% with context vs   3.4% no context
+   scoped  coverage  74.9%  | answer present:  37.8% correct  | miss set n=539:   5.0% with context vs   7.1% no context
+   split graph-pooled: answer in context  -5.22, answer absent  +2.94, total  -2.28
+   split graph-scoped: answer in context  -2.28, answer absent  +2.05, total  -0.23
+   split scoped-pooled: answer in context  -2.94, answer absent  +0.89, total  -2.05
+   entity-answer questions n=2499: graph - pooled -2.04 p = 0.028
+   by answer type graph-pooled: entity n=2499  -2.0 (p=0.028); boolean n=573  -3.0 (p=0.18); numerical n=655  +3.1 (p=0.085); date n=265  -5.7 (p=0.077)
+   by answer type graph-scoped: entity n=2499  -0.4 (p=0.69); boolean n=573  -2.4 (p=0.24); numerical n=655  +2.0 (p=0.23); date n=265  +1.9 (p=0.46)
+   by answer type scoped-pooled: entity n=2499  -1.7 (p=0.056); boolean n=573  -0.5 (p=0.86); numerical n=655  +1.1 (p=0.59); date n=265  -7.5 (p=0.0078)
+   per type graph-pooled: count +2.5, ordinal +1.2, intersection -0.8, multihop -1.5, yesno -1.8, superlative -2.2, generic -2.2, difference -4.2, comparative -4.5
+   per type graph-scoped: ordinal +2.5, count +1.8, comparative +1.5, superlative +1.5, generic -0.2, intersection -0.8, difference -1.5, multihop -2.2, yesno -3.5
+   cost none       81.3 Wh  1.19 s/q  token cap 1.6%  median prompt 126  max prompt 177
+   cost graph     303.0 Wh  3.95 s/q  token cap 1.0%  median prompt 2510  max prompt 6044
+   cost pooled    336.7 Wh  4.35 s/q  token cap 0.3%  median prompt 2890  max prompt 5937
+   cost scoped    324.3 Wh  4.24 s/q  token cap 0.6%  median prompt 2517  max prompt 5957
+   example b2ee87db none    correct=False  gold at line none  lines with 'second' 0/0  answer: 'أبو بكر الصديق'
+   example b2ee87db graph   correct=True  gold at line [122]  lines with 'second' 0/150  answer: 'جون آدامز'
+   example b2ee87db pooled  correct=False  gold at line none  lines with 'second' 137/150  answer: 'باراك أوباما'
+   example b2ee87db scoped  correct=False  gold at line [59, 128]  lines with 'second' 23/150  answer: 'جيمس ماديسون'
+
+==============================================================================
+SCALE 1000, six models, answer-seeded store (archived graph and pooled arms)
+   aya-expanse:8b       n=1000 unaided(ent)  20.9%  gap(all) +5.40 p=0.00022  ent: in-ctx +0.75 absent +4.89 total +5.64
+   command-r7b-arabic   n=1000 unaided(ent)  17.9%  gap(all) +2.00 p=0.2  ent: in-ctx +2.26 absent +3.38 total +5.64
+   gemma4:12b           n=1000 unaided(ent)  13.0%  gap(all) -2.10 p=0.14  ent: in-ctx -0.19 absent +2.07 total +1.88
+   mistral-nemo:12b     n=1000 unaided(ent)  11.8%  gap(all) -1.30 p=0.38  ent: in-ctx -2.63 absent +2.26 total -0.38
+   qwen3.5:4b           n=1000 unaided(ent)   7.9%  gap(all) +0.50 p=0.77  ent: in-ctx -0.75 absent +1.13 total +0.38
+   qwen3.5:9b           n=1000 unaided(ent)  11.8%  gap(all) -1.60 p=0.29  ent: in-ctx -3.57 absent +2.26 total -1.32
+   unaided(ent) vs gap(ent): Pearson +0.87 (p=0.033)  Spearman +0.79 (p=0.081)
+   unaided(all) vs gap(all): Pearson +0.75 (p=0.089)  Spearman +0.49 (p=0.356)
+   unaided(ent) vs absent term: Pearson +0.98 (p=0.008)  Spearman +0.82 (p=0.050)
+   unaided(ent) vs in-context term: Pearson +0.63 (p=0.175)  Spearman +0.75 (p=0.111)
+   least-squares fit: gap = -5.794 + 0.560 x unaided
+
+wrote figure data to paper-aicset-2026\figures/data_v2_*.dat

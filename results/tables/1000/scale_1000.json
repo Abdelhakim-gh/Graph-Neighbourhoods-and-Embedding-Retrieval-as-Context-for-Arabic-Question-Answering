@@ -1,0 +1,2824 @@
+{
+  "scale": "1000",
+  "runs": {
+    "graph_walk_aya-expanse_8b|seed1": {
+      "overall_accuracy": 0.375,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.5,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.3557692307692308,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.18269230769230768,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.405,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.4807692307692308,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.22916666666666666,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.3229166666666667,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.25,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6145833333333334,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.352,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.416,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.488,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.32,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.312,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.384,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.368,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.36,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 3.1797393419005675,
+      "total_wall_clock_s": 3179.7393419005675,
+      "total_gpu_energy_wh": 60.48729549288448,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5755395683453237,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.5846153846153846,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.329073482428115,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.3,
+          "n": 170
+        }
+      },
+      "arm": "graph_walk",
+      "embedding_model": null,
+      "model": "aya-expanse:8b",
+      "seed": 1,
+      "complete": true
+    },
+    "graph_walk_aya-expanse_8b|seed2": {
+      "overall_accuracy": 0.376,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4807692307692308,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.3557692307692308,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.22115384615384615,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.405,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.47115384615384615,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.19791666666666666,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.3333333333333333,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.2708333333333333,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6145833333333334,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.392,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.48,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.312,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.416,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.4,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.352,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 3.1561991935009135,
+      "total_wall_clock_s": 3156.1991935009137,
+      "total_gpu_energy_wh": 60.28931805731854,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5611510791366906,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.5538461538461539,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.3354632587859425,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.3058823529411765,
+          "n": 170
+        }
+      },
+      "arm": "graph_walk",
+      "embedding_model": null,
+      "model": "aya-expanse:8b",
+      "seed": 2,
+      "complete": true
+    },
+    "graph_walk_aya-expanse_8b|seed3": {
+      "overall_accuracy": 0.378,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4807692307692308,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.3557692307692308,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.22115384615384615,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.405,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.47115384615384615,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.20833333333333334,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.3333333333333333,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.28125,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6145833333333334,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.336,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.392,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.488,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.312,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.416,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.4,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.352,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 3.172596405200311,
+      "total_wall_clock_s": 3172.596405200311,
+      "total_gpu_energy_wh": 60.21581241353053,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5611510791366906,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.5692307692307692,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.33706070287539935,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.3058823529411765,
+          "n": 170
+        }
+      },
+      "arm": "graph_walk",
+      "embedding_model": null,
+      "model": "aya-expanse:8b",
+      "seed": 3,
+      "complete": true
+    },
+    "graph_walk_command-r7b-arabic_latest|seed1": {
+      "overall_accuracy": 0.3,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4423076923076923,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.20192307692307693,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.21153846153846154,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.33,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.41346153846153844,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.08333333333333333,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.22916666666666666,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.23958333333333334,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.5104166666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.248,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.344,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.376,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.232,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.344,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.232,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.336,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 3.4224260274015834,
+      "total_wall_clock_s": 3422.4260274015833,
+      "total_gpu_energy_wh": 64.9563803761358,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5035971223021583,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.3230769230769231,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.29073482428115016,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.1588235294117647,
+          "n": 170
+        }
+      },
+      "arm": "graph_walk",
+      "embedding_model": null,
+      "model": "command-r7b-arabic:latest",
+      "seed": 1,
+      "complete": true
+    },
+    "graph_walk_gemma4_12b|seed1": {
+      "overall_accuracy": 0.283,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4326923076923077,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.22115384615384615,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.14423076923076922,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.28,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.3942307692307692,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.041666666666666664,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.20833333333333334,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.1875,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6354166666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.224,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.344,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.36,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.232,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.2,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.32,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.272,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.312,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.002,
+      "n_truncated": 2,
+      "n_errors": 0,
+      "mean_wall_clock_s": 5.775864948900097,
+      "total_wall_clock_s": 5775.864948900096,
+      "total_gpu_energy_wh": 110.97479271758297,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5683453237410072,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.2,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.26198083067092653,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.1588235294117647,
+          "n": 170
+        }
+      },
+      "arm": "graph_walk",
+      "embedding_model": null,
+      "model": "gemma4:12b",
+      "seed": 1,
+      "complete": true
+    },
+    "graph_walk_mistral-nemo_12b|seed1": {
+      "overall_accuracy": 0.275,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.38461538461538464,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.15384615384615385,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.14423076923076922,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.355,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.3269230769230769,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.10416666666666667,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.21875,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.14583333333333334,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.5625,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.248,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.28,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.312,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.224,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.256,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.264,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 3.845139700900385,
+      "total_wall_clock_s": 3845.139700900385,
+      "total_gpu_energy_wh": 74.89070093619509,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.4748201438848921,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.5230769230769231,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.2380191693290735,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.15294117647058825,
+          "n": 170
+        }
+      },
+      "arm": "graph_walk",
+      "embedding_model": null,
+      "model": "mistral-nemo:12b",
+      "seed": 1,
+      "complete": true
+    },
+    "graph_walk_qwen3.5_4b|seed1": {
+      "overall_accuracy": 0.241,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4519230769230769,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.10576923076923077,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.1346153846153846,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.225,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.2692307692307692,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.052083333333333336,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.14583333333333334,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.09375,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.7083333333333334,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.224,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.224,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.2,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.184,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.232,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.004,
+      "n_truncated": 4,
+      "n_errors": 0,
+      "mean_wall_clock_s": 2.805653993600368,
+      "total_wall_clock_s": 2805.6539936003683,
+      "total_gpu_energy_wh": 53.77559186541706,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.6474820143884892,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.35384615384615387,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.1805111821086262,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.08823529411764706,
+          "n": 170
+        }
+      },
+      "arm": "graph_walk",
+      "embedding_model": null,
+      "model": "qwen3.5:4b",
+      "seed": 1,
+      "complete": true
+    },
+    "graph_walk_qwen3.5_9b|seed1": {
+      "overall_accuracy": 0.299,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.47115384615384615,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.23076923076923078,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.18269230769230768,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.34,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.34615384615384615,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.11458333333333333,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.14583333333333334,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.16666666666666666,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6458333333333334,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.272,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.368,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.336,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.272,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.232,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.296,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.288,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.017,
+      "n_truncated": 17,
+      "n_errors": 0,
+      "mean_wall_clock_s": 4.143724017699424,
+      "total_wall_clock_s": 4143.724017699424,
+      "total_gpu_energy_wh": 79.0957353606527,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5899280575539568,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.3076923076923077,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.25878594249201275,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.20588235294117646,
+          "n": 170
+        }
+      },
+      "arm": "graph_walk",
+      "embedding_model": null,
+      "model": "qwen3.5:9b",
+      "seed": 1,
+      "complete": true
+    },
+    "graph_walk_qwen3.5_9b|seed2": {
+      "overall_accuracy": 0.3411764705882353,
+      "n_items": 85,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.5,
+          "n": 20
+        },
+        "count": {
+          "accuracy": 0.375,
+          "n": 8
+        },
+        "difference": {
+          "accuracy": 0.1111111111111111,
+          "n": 9
+        },
+        "generic": {
+          "accuracy": 0.5,
+          "n": 2
+        },
+        "intersection": {
+          "accuracy": 0.4444444444444444,
+          "n": 9
+        },
+        "multihop": {
+          "accuracy": 0.0,
+          "n": 11
+        },
+        "ordinal": {
+          "accuracy": 0.375,
+          "n": 8
+        },
+        "superlative": {
+          "accuracy": 0.0,
+          "n": 10
+        },
+        "yesno": {
+          "accuracy": 0.875,
+          "n": 8
+        }
+      },
+      "by_category": {
+        "movies": {
+          "accuracy": 0.3287671232876712,
+          "n": 73
+        },
+        "music": {
+          "accuracy": 0.4,
+          "n": 10
+        },
+        "sports": {
+          "accuracy": 0.0,
+          "n": 1
+        },
+        "videogames": {
+          "accuracy": 1.0,
+          "n": 1
+        }
+      },
+      "truncated_rate": 0.011764705882352941,
+      "n_truncated": 1,
+      "n_errors": 0,
+      "mean_wall_clock_s": 4.551652095291544,
+      "total_wall_clock_s": 386.8904280997813,
+      "total_gpu_energy_wh": 7.503898979727273,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.7857142857142857,
+          "n": 14
+        },
+        "date": {
+          "accuracy": 0.3333333333333333,
+          "n": 9
+        },
+        "entity": {
+          "accuracy": 0.23529411764705882,
+          "n": 51
+        },
+        "numerical": {
+          "accuracy": 0.2727272727272727,
+          "n": 11
+        }
+      },
+      "arm": "graph_walk",
+      "embedding_model": null,
+      "model": "qwen3.5:9b",
+      "seed": 2,
+      "complete": false
+    },
+    "no_retrieval_aya-expanse_8b|seed1": {
+      "overall_accuracy": 0.296,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.47115384615384615,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.33653846153846156,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.17307692307692307,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.25,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.2403846153846154,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.13541666666666666,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.25,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.16666666666666666,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6875,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.44,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.256,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.216,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.432,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.232,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.176,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 0.8549081031004316,
+      "total_wall_clock_s": 854.9081031004316,
+      "total_gpu_energy_wh": 13.762703537116872,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.6474820143884892,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.5384615384615384,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.18210862619808307,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.3352941176470588,
+          "n": 170
+        }
+      },
+      "arm": "no_retrieval",
+      "embedding_model": null,
+      "model": "aya-expanse:8b",
+      "seed": 1,
+      "complete": true
+    },
+    "no_retrieval_command-r7b-arabic_latest|seed1": {
+      "overall_accuracy": 0.228,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.41346153846153844,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.25,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.09615384615384616,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.205,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.18269230769230768,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.07291666666666667,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.15625,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.125,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.5729166666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.24,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.312,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.224,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.216,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.192,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.304,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.192,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.144,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.001,
+      "n_truncated": 1,
+      "n_errors": 0,
+      "mean_wall_clock_s": 0.7769386409998406,
+      "total_wall_clock_s": 776.9386409998406,
+      "total_gpu_energy_wh": 12.18315870489235,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5611510791366906,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.27692307692307694,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.15814696485623003,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.19411764705882353,
+          "n": 170
+        }
+      },
+      "arm": "no_retrieval",
+      "embedding_model": null,
+      "model": "command-r7b-arabic:latest",
+      "seed": 1,
+      "complete": true
+    },
+    "no_retrieval_gemma4_12b|seed1": {
+      "overall_accuracy": 0.216,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.46153846153846156,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.21153846153846154,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.08653846153846154,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.15,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.19230769230769232,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.08333333333333333,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.11458333333333333,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.09375,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6145833333333334,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.192,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.296,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.272,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.152,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.152,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.312,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.176,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.176,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.003,
+      "n_truncated": 3,
+      "n_errors": 0,
+      "mean_wall_clock_s": 1.777909512099839,
+      "total_wall_clock_s": 1777.909512099839,
+      "total_gpu_energy_wh": 30.668253174094975,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.6330935251798561,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.4153846153846154,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.1134185303514377,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.17647058823529413,
+          "n": 170
+        }
+      },
+      "arm": "no_retrieval",
+      "embedding_model": null,
+      "model": "gemma4:12b",
+      "seed": 1,
+      "complete": true
+    },
+    "no_retrieval_mistral-nemo_12b|seed1": {
+      "overall_accuracy": 0.178,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.34615384615384615,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.19230769230769232,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.04807692307692308,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.185,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.09615384615384616,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.010416666666666666,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.10416666666666667,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.07291666666666667,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.5416666666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.152,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.192,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.24,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.168,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.2,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.24,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.136,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.096,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 0.5853984520996455,
+      "total_wall_clock_s": 585.3984520996455,
+      "total_gpu_energy_wh": 9.536308638380687,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.4460431654676259,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.3384615384615385,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.10702875399361023,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.1588235294117647,
+          "n": 170
+        }
+      },
+      "arm": "no_retrieval",
+      "embedding_model": null,
+      "model": "mistral-nemo:12b",
+      "seed": 1,
+      "complete": true
+    },
+    "no_retrieval_qwen3.5_4b|seed1": {
+      "overall_accuracy": 0.147,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.41346153846153844,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.09615384615384616,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.019230769230769232,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.1,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.08653846153846154,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.020833333333333332,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.03125,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.03125,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.5729166666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.12,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.208,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.2,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.144,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.072,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.184,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.144,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.104,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.006,
+      "n_truncated": 6,
+      "n_errors": 0,
+      "mean_wall_clock_s": 0.7987386543001921,
+      "total_wall_clock_s": 798.7386543001921,
+      "total_gpu_energy_wh": 13.171228621883703,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5611510791366906,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.18461538461538463,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.0670926517571885,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.08823529411764706,
+          "n": 170
+        }
+      },
+      "arm": "no_retrieval",
+      "embedding_model": null,
+      "model": "qwen3.5:4b",
+      "seed": 1,
+      "complete": true
+    },
+    "no_retrieval_qwen3.5_9b|seed1": {
+      "overall_accuracy": 0.175,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4326923076923077,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.125,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.057692307692307696,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.135,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.1346153846153846,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.041666666666666664,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.052083333333333336,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.041666666666666664,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.59375,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.12,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.352,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.192,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.192,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.112,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.224,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.088,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.12,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.015,
+      "n_truncated": 15,
+      "n_errors": 0,
+      "mean_wall_clock_s": 1.1533428692003072,
+      "total_wall_clock_s": 1153.3428692003072,
+      "total_gpu_energy_wh": 19.57082889550101,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5755395683453237,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.18461538461538463,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.10223642172523961,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.11176470588235295,
+          "n": 170
+        }
+      },
+      "arm": "no_retrieval",
+      "embedding_model": null,
+      "model": "qwen3.5:9b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_intfloat_multilingual-e5-large_aya-expanse_8b|seed1": {
+      "overall_accuracy": 0.321,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.5384615384615384,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.23076923076923078,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.11538461538461539,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.33,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.40384615384615385,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.13541666666666666,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.21875,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.28125,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.625,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.296,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.336,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.392,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.264,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.352,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.352,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 3.9128505991001146,
+      "total_wall_clock_s": 3912.850599100115,
+      "total_gpu_energy_wh": 74.2066143052936,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.6115107913669064,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.46153846153846156,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.2779552715654952,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.18823529411764706,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "model": "aya-expanse:8b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_intfloat_multilingual-e5-large_command-r7b-arabic_latest|seed1": {
+      "overall_accuracy": 0.28,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.41346153846153844,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.19230769230769232,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.16346153846153846,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.3,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.36538461538461536,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.10416666666666667,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.13541666666666666,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.19791666666666666,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.625,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.272,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.296,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.312,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.32,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.176,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.344,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.224,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.296,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 4.046807663699728,
+      "total_wall_clock_s": 4046.8076636997284,
+      "total_gpu_energy_wh": 76.96949254701076,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5827338129496403,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.3384615384615385,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.2380191693290735,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.16470588235294117,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "model": "command-r7b-arabic:latest",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_intfloat_multilingual-e5-large_gemma4_12b|seed1": {
+      "overall_accuracy": 0.304,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.5192307692307693,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.22115384615384615,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.16346153846153846,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.295,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.38461538461538464,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.07291666666666667,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.2708333333333333,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.14583333333333334,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6666666666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.28,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.352,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.368,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.352,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.152,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.344,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.28,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.304,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 6.941969910599175,
+      "total_wall_clock_s": 6941.969910599175,
+      "total_gpu_energy_wh": 133.21251638522003,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.6690647482014388,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.4,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.24600638977635783,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.18235294117647058,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "model": "gemma4:12b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_intfloat_multilingual-e5-large_mistral-nemo_12b|seed1": {
+      "overall_accuracy": 0.288,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4230769230769231,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.19230769230769232,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.16346153846153846,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.315,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.375,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.09375,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.22916666666666666,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.15625,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6145833333333334,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.272,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.352,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.36,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.208,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.296,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.24,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.288,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 4.6255336364002435,
+      "total_wall_clock_s": 4625.533636400243,
+      "total_gpu_energy_wh": 90.51074562830226,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5539568345323741,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.47692307692307695,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.24281150159744408,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.16470588235294117,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "model": "mistral-nemo:12b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_intfloat_multilingual-e5-large_qwen3.5_4b|seed1": {
+      "overall_accuracy": 0.236,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.47115384615384615,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.08653846153846154,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.10576923076923077,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.255,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.21153846153846154,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.0625,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.125,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.10416666666666667,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6875,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.192,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.208,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.168,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.28,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.208,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.256,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.003,
+      "n_truncated": 3,
+      "n_errors": 0,
+      "mean_wall_clock_s": 2.980276844400447,
+      "total_wall_clock_s": 2980.276844400447,
+      "total_gpu_energy_wh": 57.126940046274775,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.6402877697841727,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.3076923076923077,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.17731629392971246,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.09411764705882353,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "model": "qwen3.5:4b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_intfloat_multilingual-e5-large_qwen3.5_9b|seed1": {
+      "overall_accuracy": 0.315,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.5769230769230769,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.19230769230769232,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.15384615384615385,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.295,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.375,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.13541666666666666,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.16666666666666666,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.25,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.7083333333333334,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.312,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.4,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.36,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.192,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.336,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.304,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.004,
+      "n_truncated": 4,
+      "n_errors": 0,
+      "mean_wall_clock_s": 4.280979537099658,
+      "total_wall_clock_s": 4280.979537099658,
+      "total_gpu_energy_wh": 82.6939516604382,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.6762589928057554,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.3384615384615385,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.2715654952076677,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.17058823529411765,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "intfloat/multilingual-e5-large",
+      "model": "qwen3.5:9b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_Omartificial-Intelligence-Space_Arabic-Triplet-Matryoshka-V2_aya-expanse_8b|seed1": {
+      "overall_accuracy": 0.32,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4807692307692308,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.3076923076923077,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.10576923076923077,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.285,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.3942307692307692,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.20833333333333334,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.2916666666666667,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.2708333333333333,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.5729166666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.304,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.352,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.432,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.28,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.264,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.392,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.248,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 3.5423843009001574,
+      "total_wall_clock_s": 3542.3843009001575,
+      "total_gpu_energy_wh": 67.92437860620313,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5251798561151079,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.46153846153846156,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.28115015974440893,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.2411764705882353,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "Omartificial-Intelligence-Space/Arabic-Triplet-Matryoshka-V2",
+      "model": "aya-expanse:8b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_Omartificial-Intelligence-Space_Arabic-Triplet-Matryoshka-V2_command-r7b-arabic_latest|seed1": {
+      "overall_accuracy": 0.268,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4807692307692308,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.15384615384615385,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.125,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.265,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.36538461538461536,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.10416666666666667,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.17708333333333334,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.19791666666666666,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.5416666666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.248,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.344,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.304,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.168,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.352,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.16,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.28,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.0,
+      "n_truncated": 0,
+      "n_errors": 0,
+      "mean_wall_clock_s": 3.8166093712009026,
+      "total_wall_clock_s": 3816.6093712009024,
+      "total_gpu_energy_wh": 72.84685044417942,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5539568345323741,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.26153846153846155,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.24121405750798722,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.13529411764705881,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "Omartificial-Intelligence-Space/Arabic-Triplet-Matryoshka-V2",
+      "model": "command-r7b-arabic:latest",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_Omartificial-Intelligence-Space_Arabic-Triplet-Matryoshka-V2_gemma4_12b|seed1": {
+      "overall_accuracy": 0.281,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.49038461538461536,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.16346153846153846,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.19230769230769232,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.255,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.34615384615384615,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.08333333333333333,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.22916666666666666,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.125,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6666666666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.312,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.376,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.304,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.176,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.352,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.184,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.216,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.001,
+      "n_truncated": 1,
+      "n_errors": 0,
+      "mean_wall_clock_s": 6.413931095399603,
+      "total_wall_clock_s": 6413.931095399603,
+      "total_gpu_energy_wh": 124.14825669416282,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.6690647482014388,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.3230769230769231,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.22843450479233227,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.1411764705882353,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "Omartificial-Intelligence-Space/Arabic-Triplet-Matryoshka-V2",
+      "model": "gemma4:12b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_Omartificial-Intelligence-Space_Arabic-Triplet-Matryoshka-V2_mistral-nemo_12b|seed1": {
+      "overall_accuracy": 0.275,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.41346153846153844,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.20192307692307693,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.1346153846153846,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.265,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.3076923076923077,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.125,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.23958333333333334,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.16666666666666666,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6354166666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.256,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.28,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.272,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.2,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.36,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.248,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.256,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.001,
+      "n_truncated": 1,
+      "n_errors": 0,
+      "mean_wall_clock_s": 4.737992332900758,
+      "total_wall_clock_s": 4737.992332900758,
+      "total_gpu_energy_wh": 92.76626156751615,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5827338129496403,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.4,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.21565495207667731,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.19411764705882353,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "Omartificial-Intelligence-Space/Arabic-Triplet-Matryoshka-V2",
+      "model": "mistral-nemo:12b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_Omartificial-Intelligence-Space_Arabic-Triplet-Matryoshka-V2_qwen3.5_4b|seed1": {
+      "overall_accuracy": 0.219,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.4519230769230769,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.11538461538461539,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.0673076923076923,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.21,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.21153846153846154,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.07291666666666667,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.125,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.125,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6041666666666666,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.2,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.24,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.264,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.192,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.144,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.176,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.248,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.005,
+      "n_truncated": 5,
+      "n_errors": 0,
+      "mean_wall_clock_s": 3.0033476731001865,
+      "total_wall_clock_s": 3003.3476731001865,
+      "total_gpu_energy_wh": 57.46151620783928,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.5755395683453237,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.24615384615384617,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.16773162939297126,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.10588235294117647,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "Omartificial-Intelligence-Space/Arabic-Triplet-Matryoshka-V2",
+      "model": "qwen3.5:4b",
+      "seed": 1,
+      "complete": true
+    },
+    "retrieval_Omartificial-Intelligence-Space_Arabic-Triplet-Matryoshka-V2_qwen3.5_9b|seed1": {
+      "overall_accuracy": 0.298,
+      "n_items": 1000,
+      "by_complexity_type": {
+        "comparative": {
+          "accuracy": 0.5096153846153846,
+          "n": 104
+        },
+        "count": {
+          "accuracy": 0.20192307692307693,
+          "n": 104
+        },
+        "difference": {
+          "accuracy": 0.17307692307692307,
+          "n": 104
+        },
+        "generic": {
+          "accuracy": 0.28,
+          "n": 200
+        },
+        "intersection": {
+          "accuracy": 0.2980769230769231,
+          "n": 104
+        },
+        "multihop": {
+          "accuracy": 0.14583333333333334,
+          "n": 96
+        },
+        "ordinal": {
+          "accuracy": 0.20833333333333334,
+          "n": 96
+        },
+        "superlative": {
+          "accuracy": 0.19791666666666666,
+          "n": 96
+        },
+        "yesno": {
+          "accuracy": 0.6875,
+          "n": 96
+        }
+      },
+      "by_category": {
+        "books": {
+          "accuracy": 0.328,
+          "n": 125
+        },
+        "geography": {
+          "accuracy": 0.344,
+          "n": 125
+        },
+        "history": {
+          "accuracy": 0.376,
+          "n": 125
+        },
+        "movies": {
+          "accuracy": 0.288,
+          "n": 125
+        },
+        "music": {
+          "accuracy": 0.176,
+          "n": 125
+        },
+        "politics": {
+          "accuracy": 0.368,
+          "n": 125
+        },
+        "sports": {
+          "accuracy": 0.208,
+          "n": 125
+        },
+        "videogames": {
+          "accuracy": 0.296,
+          "n": 125
+        }
+      },
+      "truncated_rate": 0.004,
+      "n_truncated": 4,
+      "n_errors": 0,
+      "mean_wall_clock_s": 4.28941456700128,
+      "total_wall_clock_s": 4289.41456700128,
+      "total_gpu_energy_wh": 82.83836194674852,
+      "by_answer_type": {
+        "boolean": {
+          "accuracy": 0.6330935251798561,
+          "n": 139
+        },
+        "date": {
+          "accuracy": 0.4,
+          "n": 65
+        },
+        "entity": {
+          "accuracy": 0.24600638977635783,
+          "n": 626
+        },
+        "numerical": {
+          "accuracy": 0.17647058823529413,
+          "n": 170
+        }
+      },
+      "arm": "retrieval",
+      "embedding_model": "Omartificial-Intelligence-Space/Arabic-Triplet-Matryoshka-V2",
+      "model": "qwen3.5:9b",
+      "seed": 1,
+      "complete": true
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+ "scale": "4000",
+ "split": "test",
+ "models": {
+  "intfloat_multilingual-e5-large": {
+   "hit_rate": 0.6601190476190476,
+   "hits": 2218,
+   "n_scored": 3360,
+   "n_errors": 0,
+   "n_skipped": 640,
+   "by_complexity_type": {
+    "comparative": {
+     "hit_rate": 0.9647577092511013,
+     "n": 227
+    },
+    "count": {
+     "hit_rate": 0.7125,
+     "n": 400
+    },
+    "difference": {
+     "hit_rate": 0.6726342710997443,
+     "n": 391
+    },
+    "generic": {
+     "hit_rate": 0.6253229974160207,
+     "n": 774
+    },
+    "intersection": {
+     "hit_rate": 0.743073047858942,
+     "n": 397
+    },
+    "multihop": {
+     "hit_rate": 0.4461538461538462,
+     "n": 390
+    },
+    "ordinal": {
+     "hit_rate": 0.6691919191919192,
+     "n": 396
+    },
+    "superlative": {
+     "hit_rate": 0.6051948051948052,
+     "n": 385
+    }
+   },
+   "by_category": {
+    "books": {
+     "hit_rate": 0.6352357320099256,
+     "n": 403
+    },
+    "geography": {
+     "hit_rate": 0.6027713625866051,
+     "n": 433
+    },
+    "history": {
+     "hit_rate": 0.7033707865168539,
+     "n": 445
+    },
+    "movies": {
+     "hit_rate": 0.6706443914081146,
+     "n": 419
+    },
+    "music": {
+     "hit_rate": 0.5439429928741093,
+     "n": 421
+    },
+    "politics": {
+     "hit_rate": 0.7257683215130024,
+     "n": 423
+    },
+    "sports": {
+     "hit_rate": 0.6588235294117647,
+     "n": 425
+    },
+    "videogames": {
+     "hit_rate": 0.7442455242966752,
+     "n": 391
+    }
+   }
+  }
+ }
+}

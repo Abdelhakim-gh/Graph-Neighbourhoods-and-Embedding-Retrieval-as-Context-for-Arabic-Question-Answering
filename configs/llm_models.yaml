@@ -1,0 +1,133 @@
+# Answer-generation models, run locally through Ollama. The roster has a size
+# axis (qwen3.5 4b and 9b), general multilingual families and Arabic-specific
+# models. max_tokens is larger than a bare entity label needs, since Mintaka
+# answers are often a short phrase.
+#
+# Models left out of the roster, each for a known failure rather than a weak
+# score:
+#   SILMA-9B      malformed output in several modes in earlier experiments.
+#   AceGPT-13B    2,048-token context fixed in the GGUF, not overridable via
+#                 num_ctx. This study feeds retrieved sentences or graph paths
+#                 as context, so a 2K ceiling rules it out.
+#   ALLaM:7b      mostly empty outputs in earlier experiments.
+#   qwen3.5:0.8b  too small; 0.8b also fails to follow the output format.
+#   qwen3.5:2b
+#
+# All arms share one prompt, prompts/study4_answer_from_context_ar.txt. An
+# empty {context} gives the no-retrieval control.
+#
+# The roster narrows by scale tier, and each cut is made only after that
+# tier's table exists:
+#
+#   scale 100    all models in the list below, including the two now
+#                commented out. This tier produces the evidence for the cut.
+#   scale 1000   4 to 6 models, cut from results/tables/scale_100.json.
+#   scale 10000  2 to 3 models, cut from results/tables/scale_1000.json.
+#
+# Criteria for the 1,000-tier cut, both readable from scale_100.json:
+#   1. accuracy on the no-retrieval control below half the top model's;
+#   2. malformed output on more than 10% of items.
+# Keep at least two points on each axis: dropping qwen3.5:4b would leave the
+# size axis with one point and end the "does model size change whether the
+# graph helps" question.
+
+ollama_host: "http://localhost:11434"
+
+seeds: [1]
+# One seed, to keep the schedule. Temperature is 0.2, so seeds do differ and a
+# single run is one sample from a distribution this study does not measure.
+# Any stdev column reads 0.000 over n=1; that is an absence of evidence, not
+# a stability result. In an earlier 3-seed run at 1,000 items, the largest
+# cross-seed stdev (0.0183) was 79% of the median gap between adjacent models
+# (0.0231). Report arm gaps smaller than about that size as inconclusive.
+# If one such gap matters, re-run that comparison at 3 seeds.
+
+temperature: 0.2
+# Low but nonzero, matching earlier experiments on the same models so results
+# stay comparable. Not set to 0.0.
+
+max_tokens: 256
+# The output budget (num_predict), not the context window. The prompt asks
+# for "كلمة أو عبارة قصيرة" (a word or short phrase), and models answered in a
+# median of 11 to 36 tokens in an earlier experiment. 256 leaves room for
+# models that run long: with a 64-token cap, Fanar-1-9B stopped at the cap on
+# 86.2% of calls.
+#
+# Not raised further. num_predict is a ceiling, so a model that answers in
+# 30 tokens costs the same at 256 as at 128, but a model that rambles to fill
+# the budget costs more, and the gold answers are short phrases.
+#
+# scripts/04_run_answer_generation.py writes a per-row `hit_token_cap` flag
+# so truncation shows up directly in the results. If one model shows a high
+# rate, raise the cap for that model only.
+
+num_ctx: 8192
+# The context window. It must be sent with every request: Ollama ignores a
+# Modelfile's `PARAMETER num_ctx` unless options.num_ctx is in the request,
+# falls back to 2048 without warning, and raises exceed_context_size_error
+# past that. The walk and retrieval contexts here need well over 2048 tokens.
+
+# think=False is hardcoded in src/llm/model_runner.py's OllamaRunner.generate(),
+# not read from this file. qwen3.5 otherwise spends the whole num_predict
+# budget on a "thinking" field and leaves message.content empty. It has no
+# effect on non-reasoning models, so it is applied to all. There is no "think"
+# key here on purpose: nothing would read it. To make it configurable, pass it
+# through scripts/04's worker into generate().
+
+# Ordered by ascending cost, so a run that has to be cut short finishes the
+# cheap models first. The inline figure is the mean seconds per call measured
+# on the same hardware in an earlier short-answer experiment.
+models:
+  # size axis
+  - name: "qwen3.5:4b"                 # 1.41s
+    family: "qwen3.5"
+  - name: "qwen3.5:9b"                 # 2.15s
+    family: "qwen3.5"
+  # family axis, general
+  - name: "mistral-nemo:12b"           # 1.50s
+    family: "mistral"
+  # Cut for scale 1000 and beyond. Last on every ranking in the scale-100
+  # table: 16% with no context, 26-32% with it, 26% averaged over the four
+  # arm-runs, 32% on its best one. Its scale-100 results stay in
+  # results/tables/scale_100.json.
+  # - name: "llama3.1:8b"              # 1.58s
+  #   family: "llama"
+  - name: "gemma4:12b"                 # 3.24s
+    family: "gemma4"
+  # Arabic-specific
+  - name: "aya-expanse:8b"             # 2.17s
+    family: "aya"
+  - name: "command-r7b-arabic:latest"  # 2.28s
+    family: "command-r-arabic"
+  # Fanar: cut for scale 1000 and beyond. It is second-last by best arm-run
+  # (34%) and seventh by four-arm mean (29%), so the score alone does not
+  # separate it from qwen3.5:4b (26% mean, 35% best). Three reasons decide it:
+  #
+  #   Cost. 5.9 s per question against a roster median of 2.7, and 11.4 Wh
+  #   per 100 questions against a median of 5.0. Cutting it takes the roster
+  #   from 26.5 to 18.0 s per question.
+  #
+  #   Truncation. The only model with a material rate at max_tokens=256: 10%
+  #   on retrieval/e5, 7% with no context, 5% and 4% on the other two arms.
+  #   Some of its wrong answers are cut-off answers.
+  #
+  #   Two Arabic-specific models remain (aya-expanse:8b, command-r7b-arabic).
+  #
+  # qwen3.5:4b was kept because it is the only model below 8b; dropping it
+  # would leave the size axis with one point.
+  #
+  # - name: "hf.co/mradermacher/Fanar-1-9B-Instruct-GGUF:Q4_K_M"
+  #   family: "fanar"                  # 3.56s
+
+# The six remaining models sum to 18.0 s per question, per seed, per arm-run,
+# measured on this study's scale-100 runs (all eight: 26.5 s). Answer
+# generation costs questions x that x seeds x arm-runs. Each retrieval run
+# with a different --embedding-model is a separate arm-run, so only the best
+# two embedding models by retrieval hit rate (computed in stage 2 with no LLM
+# call) go through answer generation.
+
+# The scale tiers are set by each script's --scale argument, not by a key in
+# this file. At 10,000, run only the best 2-3 embedding models and the best
+# LLM: `python scripts/04_run_answer_generation.py --scale 10000 --models
+# <comma-separated>`. The graph pull (configs/graph_walk.yaml) also grows with
+# question count.

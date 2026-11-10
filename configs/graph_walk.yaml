@@ -1,0 +1,100 @@
+# Settings for the graph-walk arm. max_hops, path_ranking and top_paths were
+# chosen by measuring them against a cached 3-hop pull (412,096 triples,
+# 25,940 heads).
+
+max_hops: 2
+# Mintaka's stated maximum reasoning depth is 3, but reasoning depth (steps of
+# inference) is not the same as Wikidata path length (how far apart the
+# question and answer entities sit). The second is what a bounded pull has to
+# cover. Sen, Aji and Saffari (2022), "Mintaka: A Complex, Natural, and
+# Multilingual Dataset for End-to-End Question Answering", COLING 2022, Table 2
+# and section 5.1, report a path "62% of the time within 1 hop and 97% of the
+# time within 2 hops". A third hop buys at most the remaining 3%.
+#
+# On the stratified scale-100 tier, of the 53 entity-answer questions, 17.0%
+# have gold as a question entity (0 hops), 64.2% reach it at hop 1 and 18.9% at
+# hop 2; hop 3 adds 0.0%. The walk is undirected and counts the 0-hop case,
+# so this is a little more generous than the paper's figure. A third hop
+# costs 5.2x the retrieval corpus (412,096 sentences against 78,916) and 4.5x
+# the walk's candidate set (median 65,268 nodes against 14,351).
+#
+# Zhang et al. (2022), "Subgraph Retrieval Enhanced Model for Multi-hop
+# Knowledge Base Question Answering", ACL 2022, describe the same trade-off:
+# "a small one may exclude the answer but a large one might introduce more
+# noises".
+
+max_neighbors_per_qid: 50
+# Over the 25,927 non-empty heads in the cached pull: mean out-degree 15.9,
+# median 12, and only 6.5% of heads reach the cap. It does not limit fan-out
+# or recall in practice.
+
+path_ranking: "shortest_then_question_overlap"
+# Shortest paths first, ties broken by how many words a path's rendered labels
+# share with the Arabic question text. No model call is needed, so the arm
+# stays a pure traversal.
+#
+# Breaking ties on summed corpus frequency of the relations (most frequent
+# first) prefers the relations that carry the least information: P31
+# (instance of) and P106 (occupation) took 63% of all top-5 slots across 60
+# questions. Retrieval uses inverse document frequency for the same reason.
+#
+# Gold-answer-in-context rate, over the 27 scale-100 questions whose gold
+# sits 1-2 hops out, by sort key and context budget:
+#
+#   sort key                          top5   top25   top50  top100
+#   shortest + most-frequent          0.0%   18.5%   25.9%   51.9%
+#   shortest + rarest                 0.0%   40.7%   63.0%   70.4%
+#   shortest + question overlap       7.4%   37.0%   44.4%   77.8%
+
+top_paths: 150
+# Works together with the order-preserving dedup in the walk-context builder.
+# Sibling paths re-render their shared prefix: A->B->C and A->B->D both emit
+# the "A - rel - B" line, so 28-31% of rendered lines were repeats (measured
+# on walk_100 and walk_1000). After dedup, distinct lines track top_paths 1:1,
+# since each extra path adds one new final edge on top of a shared prefix
+# (100 paths -> 100 distinct, 200 -> 200). So 150 paths gives 150 distinct
+# lines, matching top_k = 150 in configs/embedding_models.yaml.
+#
+# Match the arms on distinct fact lines, not on paths or rendered lines.
+# Re-check this whenever either budget changes. If the arms get different
+# amounts of context, the comparison measures context size rather than method.
+#
+# A small budget is the binding constraint: no sort key gets above 7.4% at
+# top 5. 100 paths cost about 1,950 tokens of the 8,192 num_ctx budget;
+# 200 paths (~7,780 tokens) do not fit.
+
+excluded_properties:
+  # Wikimedia's own bookkeeping, not world knowledge. On the stratified
+  # scale-100 corpus, 4,125 of 69,625 entity facts (5.92%) named a Wikimedia
+  # category, template or project page. "أفغانستان - التصنيف الرئيس للموضوع - تصنيف:أفغانستان"
+  # (Afghanistan - topic's main category - Category:Afghanistan) is a fact
+  # about how Wikipedia is organised and says nothing about Afghanistan.
+  #
+  # Applied before scope_to_seeds, so a category page is never reached and
+  # its own outgoing edges drop out with it. Both arms read the filtered
+  # graph, and the walk can no longer hop through a category page and back
+  # out (the topical drift Monnin et al. (2024) warn about).
+  #
+  # The rule is "the object is a Wikimedia page, or the property manages a
+  # Wikimedia project", not "this property looks unhelpful". P1343 (described
+  # by source) is kept: it states something about the entity, not the wiki.
+  - P910    # topic's main category
+  - P1792   # category of associated people
+  - P1424   # topic's main template
+  - P1464   # category for people born here
+  - P1465   # category for people who died here
+  - P971    # category combines topics
+  - P5008   # on focus list of Wikimedia project
+  - P6104   # maintained by WikiProject
+  - P7084   # related category
+  - P1151   # topic's main Wikimedia portal
+  - P301    # category's main topic
+  - P1753   # list related to category
+  - P1754   # category related to list
+  - P2354   # has list
+  - P4224   # category contains
+  - P3921   # Wikidata SPARQL query equivalent
+
+graph_cache_dir: "data/processed/graph_cache"
+# Per-QID neighborhoods, keyed by QID, so a larger scale tier only pulls
+# newly-needed QIDs rather than re-pulling everything.

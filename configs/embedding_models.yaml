@@ -1,0 +1,66 @@
+# Embedding models for the retrieval arm. The roster covers general
+# multilingual models, Arabic-specific models and small, fast baselines.
+#
+# Three of the seven models are trained to receive a prefix and score worse
+# without one, and each wants a different format. Running all seven on bare
+# text would handicap those three, so each gets the prefix quoted from its own
+# model card. The multilingual-e5-large card says the prefixes are needed:
+# "Yes, this is how the model is trained, otherwise you will see a performance
+# degradation."
+
+models:
+  # sentence-transformers models
+  - name: "intfloat/multilingual-e5-large"
+    backend: "sentence-transformers"
+    role: "general multilingual reference"
+    query_prefix: "query: "
+    document_prefix: "passage: "
+  - name: "Omartificial-Intelligence-Space/GATE-AraBert-v1"
+    backend: "sentence-transformers"
+    role: "Arabic-specific"
+    # plain sentence-transformers model, no documented prefix
+  - name: "Omartificial-Intelligence-Space/Arabic-Triplet-Matryoshka-V2"
+    backend: "sentence-transformers"
+    role: "Arabic-specific, first on Arabic STS17 at time of writing"
+  - name: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    backend: "sentence-transformers"
+    role: "small and fast, the cheap end of the cost axis"
+  # Ollama models
+  - name: "bge-m3"
+    backend: "ollama"
+    role: "general multilingual"
+    # BGE-M3 needs no instruction for retrieval; deliberately left bare
+  - name: "qwen3-embedding:8b"
+    backend: "ollama"
+    role: "general multilingual"
+    # "Each query must come with a one-sentence instruction that describes
+    # the task", and omitting it costs "approximately 1% to 5%" of retrieval
+    # performance. Documents take none: "No need to add instruction for
+    # retrieval documents."
+    query_prefix: "Instruct: Given an Arabic question, retrieve Wikidata facts that answer it\nQuery: "
+  - name: "embeddinggemma:300m"
+    backend: "ollama"
+    role: "small fast embedding baseline"
+    # EmbeddingGemma's retrieval templates. The document side takes a title
+    # slot which defaults to "none"; these facts have no title.
+    query_prefix: "task: search result | query: "
+    document_prefix: "title: none | text: "
+
+top_k: 150
+# Retrieved sentences fed to the answer LLM per question.
+#
+# The graph-walk and retrieval arms have to see about the same amount of
+# context, or the comparison measures context size rather than retrieval
+# against walking. A path is not a fact line: a 1-hop path renders one line and
+# a 2-hop path renders two, so top_paths=100 in configs/graph_walk.yaml gives a
+# median of 145 lines per question (range 100 to 197 on the stratified
+# scale-100 walk output). 150 matches that median. The match cannot be exact,
+# because the walk arm's line count varies per question while top_k is fixed.
+#
+# Cost: 150 lines at a mean of 45 characters is about 6,700 characters,
+# roughly 2,700 tokens of the 8,192 num_ctx. The output budget (max_tokens 256)
+# is unchanged.
+#
+# Hit rate is measured at this same k, because it is used to pick the 2 of 7
+# embedding models for answer generation and must reflect what the answer LLM
+# will see.

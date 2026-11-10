@@ -1,0 +1,3 @@
+Identify the named entities mentioned in the Arabic question below. Return only a JSON array of strings. Copy each mention exactly from the question. If there are none, return [].
+
+Question: {question}
