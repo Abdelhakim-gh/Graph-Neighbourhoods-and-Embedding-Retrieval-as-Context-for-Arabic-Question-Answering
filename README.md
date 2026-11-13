@@ -1,6 +1,6 @@
 # Graph Neighbourhoods and Embedding Retrieval as Context for Arabic Question Answering
 
-Code, data and model outputs for the AICSET 2026 paper of the same title, by Abdelhakim EL Ghayoubi, Achraf Chahboune, Imad Sassi and Said Bahassine.
+Code, data and model outputs for the AICSET 2026 paper of the same title, by Abdelhakim El Ghayoubi, Achraf Chahboune, Imad Sassi and Said Bahassine.
 
 On the 4,000 Arabic questions in the Mintaka test split, the study compares four answer-generation arms: no context, a graph walk, pooled dense retrieval with multilingual-E5 large, and scoped retrieval within the graph walk's candidate pool. Each context arm selects up to 150 Wikidata fact lines. The study measures answer accuracy, coverage of gold entity labels in the context, and the cost of a miss: the change in accuracy on questions whose context does not contain the gold label, compared with the same model without context. The fact store was pulled around both question and gold-answer entities as a controlled setting, so its coverage is optimistic.
 
@@ -155,7 +155,7 @@ Script 04 and the mention step resume by `item_id`, and existing context files a
 ```
 @inproceedings{elghayoubi2026graphqa,
   title     = {Graph Neighbourhoods and Embedding Retrieval as Context for Arabic Question Answering},
-  author    = {Abdelhakim {EL Ghayoubi} and Achraf Chahboune and Imad Sassi and Said Bahassine},
+  author    = {Abdelhakim {El Ghayoubi} and Achraf Chahboune and Imad Sassi and Said Bahassine},
   booktitle = {Proceedings of the 2nd International Conference on Artificial Intelligence and Cognitive Science for Emerging Technologies (AICSET 2026)},
   publisher = {Springer},
   year      = {2026},
